@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupActivity">
+
+    <!-- 1. HÌNH NỀN PHÍA TRÊN -->
+    <ImageView
+        android:id="@+id/background2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/top_background2"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 2. TIÊU ĐỀ "CREATE ACCOUNT" -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
+        android:text="Create\nAccount"
+        android:textColor="#3B4485"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/background2" />
+
+    <!-- 3. VÙNG NHẬP NAME -->
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="36dp"
+        android:background="@android:color/transparent"
+        android:drawableStart="@drawable/name"
+        android:drawablePadding="12dp"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:padding="8dp"
+        android:textColorHint="#9E9E9E"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+    <View
+        android:id="@+id/nameLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#BDBDBD"
+        app:layout_constraintEnd_toEndOf="@+id/editTextName"
+        app:layout_constraintStart_toStartOf="@+id/editTextName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+
+    <!-- 4. VÙNG NHẬP EMAIL -->
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/transparent"
+        android:drawableStart="@drawable/email"
+        android:drawablePadding="12dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="8dp"
+        android:textColorHint="#9E9E9E"
+        app:layout_constraintEnd_toEndOf="@+id/nameLine"
+        app:layout_constraintStart_toStartOf="@+id/nameLine"
+        app:layout_constraintTop_toBottomOf="@+id/nameLine" />
+
+    <View
+        android:id="@+id/emailLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#BDBDBD"
+        app:layout_constraintEnd_toEndOf="@+id/editTextEmail"
+        app:layout_constraintStart_toStartOf="@+id/editTextEmail"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+
+    <!-- 5. VÙNG NHẬP PASSWORD -->
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/transparent"
+        android:drawableStart="@drawable/password"
+        android:drawablePadding="12dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="8dp"
+        android:textColorHint="#9E9E9E"
+        app:layout_constraintEnd_toEndOf="@+id/emailLine"
+        app:layout_constraintStart_toStartOf="@+id/emailLine"
+        app:layout_constraintTop_toBottomOf="@+id/emailLine" />
+
+    <View
+        android:id="@+id/passwordLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#BDBDBD"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
+        app:layout_constraintStart_toStartOf="@+id/editTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+
+    <!-- 6. NÚT MŨI TÊN -->
+    <ImageView
+        android:id="@+id/arrowButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="36dp"
+        android:src="@drawable/btn_arrow2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordLine" />
+
+    <!-- 7. VĂN BẢN CUỐI TRANG -->
+    <TextView
+        android:id="@+id/recoveryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Forget your password? Recovery it"
+        android:textColor="#3B4485"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
